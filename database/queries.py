@@ -5,8 +5,9 @@ from mysql.connector import Error
 try:
     from .db_config import DB_CONFIG
 except Exception:
+    # support import from top-level when running tests
     try:
-        from database.db_config import DB_CONFIG
+        from database.db_config import DB_CONFIG  # fallback
     except Exception:
         DB_CONFIG = None
 
