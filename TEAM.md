@@ -16,7 +16,7 @@ This AI Shopping Assistant is developed as part of the **AI-DBMS Mini Project** 
 
 **Responsibilities:**
 - 🖥️ Streamlit Application Development
-- 🎨 CSS Styling & Dark Theme Implementation
+- 🎨 Styling & Dark Theme Implementation
 - 🔄 Interactive Component Design
 - 📱 Responsive Layout & Mobile Optimization
 - 🎭 User Experience (UX) Design
@@ -108,7 +108,6 @@ This AI Shopping Assistant is developed as part of the **AI-DBMS Mini Project** 
 ### **Om's Learning Journey**
 - **Frontend Development** - Advanced Streamlit techniques
 - **UI/UX Design** - Modern interface design principles
-- **CSS Mastery** - Complex styling and animations
 - **User Experience** - Creating intuitive interfaces
 - **Responsive Design** - Multi-device compatibility
 
