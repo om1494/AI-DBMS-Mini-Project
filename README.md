@@ -338,7 +338,7 @@ python demo.py
 **Om** 🎨<br>
 *Frontend Developer*
 - Streamlit UI Design
-- CSS Styling & Animations
+- Styling & Animations
 - User Experience (UX)
 - Interactive Components
 - Responsive Design
@@ -427,17 +427,6 @@ python demo.py
 - **Network:** High-speed broadband connection
 
 ---
-
-## 🤝 **Contributing**
-
-We welcome contributions! Here's how you can help:
-
-### **Ways to Contribute**
-- 🐛 **Bug Reports** - Found an issue? Let us know!
-- 💡 **Feature Requests** - Have an idea? Share it!
-- 📖 **Documentation** - Help improve our docs
-- 🧪 **Testing** - Help us test new features
-- 💻 **Code** - Submit pull requests
 
 ### **Development Setup**
 ```bash
