@@ -18,24 +18,38 @@ def extract_price(msg):
     return None
 
 def extract_category(msg):
-    cats = ['mobile', 'phone', 'laptop', 'headphone', 'headphones', 'tv', 'camera', 'watch', 'shoe', 'shoes','wearable','earbuds']
+    cats = ['mobile', 'phone', 'phones', 'laptop', 'laptops', 'headphone', 'headphones', 'tv', 'camera', 'watch', 'shoe', 'shoes','wearable','earbuds']
     s = msg.lower()
     for c in cats:
         if c in s:
-            # normalize plural
-            return c.rstrip('s')
+            # normalize plural and map phones to mobile
+            if c in ['phone', 'phones']:
+                return 'mobile'
+            elif c in ['laptops']:
+                return 'laptop'
+            elif c in ['headphones', 'earbuds']:
+                return 'headphones'
+            elif c in ['shoes']:
+                return 'shoes'
+            else:
+                return c.rstrip('s')
     return None
 
 def extract_name_like(msg):
     # pull words after keywords like "find", "search", "show me", or use first capitalized token
     s = msg.lower()
+    
+    # Skip generic category words
+    category_words = ['mobiles', 'mobile', 'phones', 'phone', 'laptops', 'laptop', 'headphones', 'headphone', 'tvs', 'tv', 'wearables', 'wearable', 'shoes', 'shoe']
+    
     m = re.search(r'(?:find|search|show|show me|i want)\s+(.*)', s)
     if m:
         candidate = re.split(r'\bunder\b|\bbelow\b|\bfor\b|\bwith\b', m.group(1))[0].strip()
-        if candidate and len(candidate) > 2:
+        if candidate and len(candidate) > 2 and candidate not in category_words:
             return candidate
+    
     # fallback: if user typed a brand/model like "redmi" or "hp"
-    brands = ['redmi','samsung','hp','lenovo','boat','sony','noise','puma','realme','mi']
+    brands = ['redmi','samsung','hp','lenovo','boat','sony','noise','puma','realme','mi','apple','oneplus','dell','jbl','nike','adidas','xiaomi']
     for b in brands:
         if b in s:
             return b
@@ -44,12 +58,16 @@ def extract_name_like(msg):
 def generate_reply(message):
     m = message.strip()
     if not m:
-        return "Please type something like 'show mobiles under 20000' or 'find Redmi'."
+        return "Please type something like 'show mobiles under 20000' or 'find Samsung phones'."
 
     msg_low = m.lower()
-    greetings = ['hi','hello','hey']
+    greetings = ['hi','hello','hey','good morning','good evening']
     if any(g in msg_low for g in greetings) and len(msg_low.split()) < 4:
-        return "Hello! I'm ShopBot. Ask me to 'show mobiles under 20000', 'find headphones', or 'search Redmi'."
+        return "Hello! I'm ShopBot 🛒. Ask me to 'show mobiles under 20000', 'find headphones', or 'search Samsung phones'."
+
+    # Handle thanks
+    if any(word in msg_low for word in ['thank', 'thanks']):
+        return "You're welcome! 😊 Need help finding anything else?"
 
     price = extract_price(m)
     category = extract_category(m)
@@ -57,17 +75,38 @@ def generate_reply(message):
 
     if not (price or category or name_like):
         # default fallback: ask clarifying question
-        return "I can help you find products — try 'show mobiles under 15000' or 'find Redmi'."
+        return "I can help you find products! Try: 'show mobiles under 15000', 'find Samsung phones', or 'search headphones'."
 
     # Query DB
     products = search_products(category=category, max_price=price, name_like=name_like, limit=10)
     if not products:
-        return "Sorry — no products matched. Try broader keywords or higher price."
+        suggestions = []
+        if price:
+            suggestions.append(f"try increasing your budget above ₹{int(price)}")
+        if category:
+            suggestions.append(f"search in other categories besides {category}")
+        if name_like:
+            suggestions.append(f"try different brands or keywords instead of '{name_like}'")
+        
+        suggestion_text = " or ".join(suggestions) if suggestions else "try different search terms"
+        return f"Sorry, no products matched your search. You could {suggestion_text}."
 
-    # Build structured response
-    header = f"Found {len(products)} product(s). Showing top results (sorted by price):"
-    # convert to readable lines
+    # Build structured response with enhanced formatting
+    header = f"Found {len(products)} product(s) matching your search 🎯"
+    # convert to readable lines with enhanced information
     lines = []
     for p in products:
-        lines.append(f"{p['name']} — {p['category'].title()} — ₹{p['price']} — Stock: {p['stock']}")
+        rating_stars = "⭐" * int(p.get('rating', 0)) if p.get('rating') else ""
+        stock_status = "✅ In Stock" if p['stock'] > 0 else "❌ Out of Stock"
+        brand_info = f"by {p.get('brand', 'Unknown')}" if p.get('brand') else ""
+        
+        line = f"**{p['name']}** {brand_info}"
+        line += f"\n   💰 ₹{p['price']} | 📦 {stock_status} ({p['stock']} units)"
+        if rating_stars:
+            line += f" | {rating_stars} {p.get('rating', 0)}/5"
+        if p.get('description'):
+            line += f"\n   📝 {p['description'][:100]}{'...' if len(p['description']) > 100 else ''}"
+        
+        lines.append(line)
+    
     return {"header": header, "items": lines, "products": products}

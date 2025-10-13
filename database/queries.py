@@ -20,7 +20,7 @@ def get_connection():
 def search_products(category=None, max_price=None, name_like=None, limit=10):
     conn = get_connection()
     cursor = conn.cursor(dictionary=True)
-    sql = "SELECT id,name,category,price,stock,description FROM products WHERE 1=1"
+    sql = "SELECT id,name,category,price,stock,description,brand,rating FROM products WHERE 1=1"
     params = []
     if category:
         sql += " AND LOWER(category) LIKE %s"
@@ -29,7 +29,9 @@ def search_products(category=None, max_price=None, name_like=None, limit=10):
         sql += " AND price <= %s"
         params.append(max_price)
     if name_like:
-        sql += " AND LOWER(name) LIKE %s"
+        # Search in both name and brand
+        sql += " AND (LOWER(name) LIKE %s OR LOWER(brand) LIKE %s)"
+        params.append(f"%{name_like.lower()}%")
         params.append(f"%{name_like.lower()}%")
     sql += " ORDER BY price ASC LIMIT %s"
     params.append(limit)

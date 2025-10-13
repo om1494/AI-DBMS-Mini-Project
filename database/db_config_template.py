@@ -1,9 +1,11 @@
 # database/db_config_template.py
-# Copy to database/db_config.py locally and fill your DB credentials
+# Copy this file to db_config.py and fill in your actual database credentials
+# DO NOT commit db_config.py to version control for security
+
 DB_CONFIG = {
     "host": "localhost",
-    "user": "your_db_user",
-    "password": "your_db_password",
-    "database": "shopping_db",
+    "user": "your_mysql_username",    # Replace with your MySQL username
+    "password": "your_mysql_password", # Replace with your MySQL password  
+    "database": "student_db",
     "port": 3306
 }
