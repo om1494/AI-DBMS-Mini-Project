@@ -11,43 +11,47 @@ This AI Shopping Assistant is developed as part of the **AI-DBMS Mini Project** 
 
 <div align="center">
 
-### **Om** 🎨
-**Frontend Developer & UI/UX Designer**
+### **Om** 💻
+**Full-Stack Developer**
 
 **Responsibilities:**
-- 🖥️ Streamlit Application Development
-- 🎨 CSS Styling & Dark Theme Implementation
+- 🖥️ Streamlit Application Architecture
+- 🎨 UI Design & Dark Theme Implementation
+- 🗄️ Database Schema Development
+- 🧠 Natural Language Processing Logic
 - 🔄 Interactive Component Design
-- 📱 Responsive Layout & Mobile Optimization
-- 🎭 User Experience (UX) Design
+- 🧪 Testing & Quality Assurance
 - ✨ Animations & Visual Effects
 
 **Key Contributions:**
 - Modern dark-themed interface design
+- Database structure and optimization
+- NLP query parsing implementation
 - Interactive product cards with hover effects
-- Sidebar quick commands implementation
-- Chat interface styling and animations
-- Responsive design across devices
+- Search functionality development
+- Comprehensive testing suite
 
 ---
 
-### **Dattaprasad** 🔧
-**Backend Developer & Database Architect**
+### **Dattaprasad** 🚀
+**Full-Stack Developer**
 
 **Responsibilities:**
-- 🗄️ MySQL Database Design & Implementation
-- 🧠 Natural Language Processing Logic
-- 🔍 Search Algorithm Development
-- 📊 Database Query Optimization
-- 🧪 Testing & Quality Assurance
-- 🛠️ System Architecture Design
+- 🛠️ Backend Architecture & System Design
+- 🎭 Frontend User Experience
+- 🗄️ MySQL Database Management
+- 🧠 Chatbot Logic & NLP Parsing
+- 📱 Responsive Design Implementation
+- 📊 Search Algorithm Optimization
+- 📖 Documentation & Project Setup
 
 **Key Contributions:**
-- Comprehensive database schema with 150+ products
-- Rule-based NLP engine for query understanding
-- Multi-criteria search functionality
-- Database connection and query management
-- Test suite development and validation
+- Backend API and database connectivity
+- User interface enhancements
+- Multi-criteria search algorithms
+- Chatbot conversation management
+- Mobile-responsive design
+- Project documentation and setup tools
 
 </div>
 
@@ -69,19 +73,19 @@ This AI Shopping Assistant is developed as part of the **AI-DBMS Mini Project** 
 
 ## 🛠️ **Technology Expertise**
 
-### **Frontend Technologies (Om)**
-- **Streamlit** - Modern web app framework
-- **CSS3** - Advanced styling and animations
-- **HTML5** - Semantic markup
-- **Responsive Design** - Mobile-first approach
-- **User Experience** - Intuitive interface design
+### **Om's Technical Stack**
+- **Python & Streamlit** - Full-stack web development
+- **MySQL & Database Design** - Schema architecture & optimization
+- **CSS3 & Responsive Design** - Modern UI/UX implementation
+- **Natural Language Processing** - Query parsing & text analysis
+- **Testing & Quality Assurance** - Comprehensive validation suites
 
-### **Backend Technologies (Dattaprasad)**
-- **Python** - Core programming language
-- **MySQL** - Relational database management
-- **Natural Language Processing** - Rule-based text understanding
-- **Database Design** - Normalized schema architecture
-- **Query Optimization** - Performance tuning
+### **Dattaprasad's Technical Stack**
+- **Backend Architecture** - System design & API development
+- **Frontend Development** - User experience & interface design
+- **Database Management** - MySQL administration & optimization
+- **AI & Machine Learning** - NLP logic & search algorithms
+- **Project Management** - Documentation & deployment strategies
 
 ---
 
@@ -106,18 +110,18 @@ This AI Shopping Assistant is developed as part of the **AI-DBMS Mini Project** 
 ## 🎓 **Learning Outcomes**
 
 ### **Om's Learning Journey**
-- **Frontend Development** - Advanced Streamlit techniques
-- **UI/UX Design** - Modern interface design principles
-- **CSS Mastery** - Complex styling and animations
-- **User Experience** - Creating intuitive interfaces
-- **Responsive Design** - Multi-device compatibility
+- **Full-Stack Development** - End-to-end application building
+- **Database Architecture** - Schema design and optimization
+- **Natural Language Processing** - AI-powered text understanding
+- **Modern UI/UX** - Dark themes and responsive design
+- **Testing Methodologies** - Quality assurance and validation
 
 ### **Dattaprasad's Learning Journey**
-- **Database Design** - Scalable schema architecture
-- **NLP Implementation** - Text processing algorithms
-- **Python Programming** - Advanced coding techniques
-- **Query Optimization** - Database performance tuning
-- **System Integration** - Frontend-backend connectivity
+- **System Architecture** - Scalable backend design
+- **Frontend Technologies** - User interface development
+- **AI & Machine Learning** - Intelligent search algorithms
+- **Database Management** - Performance optimization
+- **Project Leadership** - Documentation and team collaboration
 
 ---
 
@@ -141,14 +145,14 @@ This AI Shopping Assistant is developed as part of the **AI-DBMS Mini Project** 
 
 For questions about this project or collaboration opportunities:
 
-### **Om** (Frontend Developer)
-- **Role:** UI/UX Design & Frontend Development
-- **Expertise:** Streamlit, CSS, Responsive Design
+### **Om** (Full-Stack Developer)
+- **Role:** Full-Stack Development & Database Architecture
+- **Expertise:** Python, Streamlit, MySQL, NLP, UI/UX Design
 - **GitHub:** *[To be updated with actual GitHub profile]*
 
-### **Dattaprasad** (Backend Developer) 
-- **Role:** Backend Development & Database Architecture
-- **Expertise:** Python, MySQL, NLP, System Design
+### **Dattaprasad** (Full-Stack Developer) 
+- **Role:** System Architecture & Full-Stack Development
+- **Expertise:** Backend APIs, Frontend UX, Database Management, AI/ML
 - **GitHub:** *[To be updated with actual GitHub profile]*
 
 ---

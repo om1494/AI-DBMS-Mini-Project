@@ -335,24 +335,28 @@ python demo.py
 <tr>
 <td align="center" width="50%">
 
-**Om** 🎨<br>
-*Frontend Developer*
-- Streamlit UI Design
-- CSS Styling & Animations
-- User Experience (UX)
-- Interactive Components
-- Responsive Design
+**Om** 💻<br>
+*Full-Stack Developer*
+- Streamlit UI Design & Architecture
+- Database Schema Development
+- Natural Language Processing Logic
+- Interactive Component Design
+- CSS Styling & Dark Theme
+- Product Search Implementation
+- Testing & Quality Assurance
 
 </td>
 <td align="center" width="50%">
 
-**Dattaprasad** 🔧<br>
-*Backend Developer*
-- Database Design & Setup
-- NLP Logic Implementation
-- Search Algorithms
-- API Integration
-- Testing & Optimization
+**Dattaprasad** 🚀<br>
+*Full-Stack Developer*
+- Backend Architecture & APIs
+- Frontend User Experience
+- MySQL Database Management
+- Chatbot Logic & NLP Parsing
+- Responsive Design Implementation
+- Search Algorithm Optimization
+- Documentation & Project Setup
 
 </td>
 </tr>
