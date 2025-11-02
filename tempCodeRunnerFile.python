@@ -1,0 +1,29 @@
+def university_chatbot(): 
+    print("Chatbot: Hi! Welcome to MMCOE University Helpdesk. How can I assist you today?") 
+    
+    while True: 
+        user_input = input("You: ").lower() 
+        
+        if "hello" in user_input or "hi" in user_input: 
+            print("Chatbot: Hello! How can I help you with university-related queries?") 
+        
+        elif "admission" in user_input or "apply" in user_input: 
+            print("Chatbot: Admissions are open from June to August. You can apply online through our university portal.") 
+        
+        elif "course" in user_input or "program" in user_input: 
+            print("Chatbot: We offer B.Tech, MBA, MCA, and Ph.D. programs. Which program are you interested in?") 
+        
+        elif "exam" in user_input or "test" in user_input: 
+            print("Chatbot: Semester exams are held in December and May. Timetables are available on the university website.") 
+        
+        elif "library" in user_input: 
+            print("Chatbot: Our library is open from 8 AM to 8 PM on weekdays and 9 AM to 5 PM on weekends.") 
+        
+        elif "hostel" in user_input or "accommodation" in user_input:
+            print("Chatbot: Hostel facilities are available for both boys and girls with Wi-Fi and mess services.") 
+        
+        elif "fees" in user_input or "scholarship" in user_input: 
+            print("Chatbot: Fee details and scholarship options are available on the Fees & Scholarship section of our website.") 
+        
+        elif "thank" in user_input: 
+            print("Chatbot: You’re most welcome! Anything else I can help you with?") 
